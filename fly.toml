@@ -1,4 +1,4 @@
-app = "oddstable-server"
+app = "oddstable"
 primary_region = "iad"
 
 [build]
