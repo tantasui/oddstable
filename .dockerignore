@@ -1,0 +1,13 @@
+node_modules
+apps/client/.next
+apps/client/node_modules
+apps/server/node_modules
+apps/server/local.db
+apps/server/local.db-shm
+apps/server/local.db-wal
+packages/rules/node_modules
+programs/contest/node_modules
+scripts/node_modules
+**/.env
+**/.env.*
+scripts/txline-wallet.json
