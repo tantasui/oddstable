@@ -1,0 +1,22 @@
+FROM oven/bun:1 AS base
+WORKDIR /app
+
+# Copy workspace manifests first (better layer caching)
+COPY package.json bun.lock tsconfig.base.json ./
+COPY packages/rules/package.json packages/rules/
+COPY apps/server/package.json apps/server/
+
+RUN bun install --frozen-lockfile
+
+# Copy source
+COPY packages/ packages/
+COPY apps/server/ apps/server/
+
+WORKDIR /app/apps/server
+
+ENV NODE_ENV=production
+ENV PORT=3001
+
+EXPOSE 3001
+
+CMD ["bun", "run", "src/index.ts"]

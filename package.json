@@ -1,0 +1,13 @@
+{
+  "name": "oddstable",
+  "private": true,
+  "workspaces": [
+    "packages/*",
+    "apps/*",
+    "programs/*"
+  ],
+  "scripts": {
+    "test": "bun run --filter @oddstable/rules test",
+    "typecheck": "bun run --filter '*' typecheck"
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "installCommand": "cd ../.. && bun install",
+  "buildCommand": "cd ../.. && bun run --filter @oddstable/client build",
+  "outputDirectory": ".next"
+}

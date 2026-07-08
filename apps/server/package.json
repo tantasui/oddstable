@@ -1,0 +1,25 @@
+{
+  "name": "@oddstable/server",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "bun run --watch src/index.ts",
+    "start": "bun run src/index.ts",
+    "db:generate": "drizzle-kit generate",
+    "db:migrate": "bun run src/db/migrate.ts",
+    "db:seed": "bun run src/db/seed.ts",
+    "db": "bun run db:generate && bun run db:migrate && bun run db:seed",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@oddstable/rules": "workspace:*",
+    "drizzle-orm": "^0.45.2",
+    "hono": "^4.12.27"
+  },
+  "devDependencies": {
+    "bun-types": "^1.3.14",
+    "drizzle-kit": "^0.31.10",
+    "typescript": "^5.5.0"
+  }
+}

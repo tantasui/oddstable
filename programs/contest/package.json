@@ -1,0 +1,6 @@
+{
+  "name": "@oddstable/contest",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Phase 2 only — Anchor program: escrow pool + on-chain settlement. Empty in Phase 1."
+}
